@@ -30,6 +30,7 @@ namespace Wpf_Weather_App
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            window_Details.Title = $"Weather for {_basicWeatherData.Location} ({_basicWeatherData.ZipCode})";
             lbl_Title.Content = _basicWeatherData.Location;
             image_Weather.Source = new BitmapImage(new Uri("http://openweathermap.org/img/w/" + _basicWeatherData.Icon + ".png"));
             lbl_ZipValue.Content = _basicWeatherData.ZipCode.ToString();

@@ -5,12 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Weather_App"
         mc:Ignorable="d"
-        Title="Weather App" Height="450" Width="700" Loaded="window_Main_Loaded">
+        Title="Weather App" Height="550" Width="700" Loaded="window_Main_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Label x:Name="lbl_Title" Content="The Weather App" Grid.Column="1" Background="#FF193A70" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_Title" Content="The Weather App" Grid.Row="0" Background="#FF193A70" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_FilterText" Content="Temperature Filter" HorizontalAlignment="Left" Height="30" Margin="96,80,0,-59" VerticalAlignment="Top" Width="114"/>
         <DataGrid x:Name="dataGrid_Weather" 
                   RowHeight="25" 
                   Height="166" 
@@ -33,6 +34,11 @@
         </StackPanel>
         <Button x:Name="btn_Details" Content="Details" HorizontalAlignment="Left" Height="45" FontSize="14" Margin="96,341,0,-336" VerticalAlignment="Top" Width="140" Background="#FF193A70" Foreground="White" BorderBrush="Black" MouseEnter="btn_Details_MouseEnter" MouseLeave="btn_Details_MouseLeave" Click="btn_Details_Click"/>
         <Button x:Name="btn_Help" Content="Help" HorizontalAlignment="Left" Height="45" FontSize="14" Margin="276,341,0,-336" VerticalAlignment="Top" Width="140" Background="#FF193A70" Foreground="#FFF7F7F7" BorderBrush="Black" Click="btn_Help_Click"/>
-        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Height="45" FontSize="14" Margin="456,341,0,-336" VerticalAlignment="Top" Width="140" Background="#FF193A70" Foreground="White" BorderBrush="Black" Click="Button_Click"/>
+        <Button x:Name="btn_Exit" Content="Exit" HorizontalAlignment="Left" Height="45" FontSize="14" Margin="456,341,0,-336" VerticalAlignment="Top" Width="140" Background="#FF193A70" Foreground="White" BorderBrush="Black" Click="btn_Exit_Click"/>
+        <ComboBox x:Name="comboBox_Filter" HorizontalAlignment="Left" Height="28" Margin="215,80,0,-61" VerticalAlignment="Top" Width="150" VerticalContentAlignment="Center"/>
+        <TextBox x:Name="textBox_Filter" HorizontalAlignment="Left" Height="28" Margin="381,80,0,-59" TextWrapping="Wrap" VerticalAlignment="Top" Width="75" VerticalContentAlignment="Center"/>
+        <Button x:Name="btn_EnterFilter" Content="Enter" HorizontalAlignment="Left" Height="28" Margin="475,80,0,-59" VerticalAlignment="Top" Width="55" Click="btn_EnterFilter_Click_1" BorderBrush="#FF0061FF" Background="White" Foreground="#FF193A70" FontSize="14"/>
+        <Button x:Name="btn_ClearFilter" Content="Clear" HorizontalAlignment="Left" Height="28" Margin="541,80,0,-59" VerticalAlignment="Top" Width="55" Click="btn_ClearFilter_Click" BorderBrush="#FF0061FF" Background="White" Foreground="#FF193A70" FontSize="14"/>
+        <Button x:Name="btn_Refresh" Content="Refresh" HorizontalAlignment="Left" Height="45" Margin="276,409,0,-408" VerticalAlignment="Top" Width="140" Click="btn_Refresh_Click" FontSize="14"/>
     </Grid>
 </Window>

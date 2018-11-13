@@ -5,13 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Weather_App"
         mc:Ignorable="d"
-        Title="HelpWindow" Height="310.5" Width="800" Loaded="window_Help_Loaded">
+        Title="Help" Height="300" Width="800" Loaded="window_Help_Loaded">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto" MinHeight="80"/>
         </Grid.RowDefinitions>
-        <Label x:Name="lbl_Title" Content="How to Use the Weather App" Grid.Column="1" Background="#FF193A70" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
-        <Label x:Name="lbl_HelpText" Content="Label" HorizontalAlignment="Stretch" Margin="30,80,30,-100" VerticalAlignment="Top" Width="Auto" Height="Auto" FontSize="14"/>
-        <Button Content="Close" HorizontalAlignment="Center" Height="45" Margin="0,214,0,-214" Width="140" BorderBrush="Black" Foreground="White" Background="#FF193A70" VerticalAlignment="Bottom" Click="Button_Click"/>
+        <Label x:Name="lbl_Title" Content="How to Use the Weather App" Grid.Column="0" Background="#FF193A70" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Label x:Name="lbl_HelpText" HorizontalAlignment="Stretch" VerticalAlignment="Top" FontSize="14" Grid.Row="1" Margin="20" Width="Auto" Height="Auto"/>
+        <Button x:Name="btn_Close"  Content="Close" HorizontalAlignment="Center" VerticalAlignment="Bottom" Height="45" Width="140"  Grid.Row="2"  FontSize="14" BorderBrush="Black" Foreground="White" Background="#FF193A70" Click="Button_Click"/>
     </Grid>
 </Window>

@@ -28,7 +28,8 @@ namespace Wpf_Weather_App
         {
             this.lbl_HelpText.Content = "Clicking on the Details button when a row is selected will display additional information. \n" +
                 "The Get Latest Data button uses OpenWeatherMap's API to retrieve updated weather data. \n" +
-                "Use the controls above the weather data to filter the weather data by temperature.";
+                "Use the controls above the weather data to filter the weather data by temperature. \n" +
+                "The refresh button loads in the latest weather data and is available once every 15 seconds.";
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)

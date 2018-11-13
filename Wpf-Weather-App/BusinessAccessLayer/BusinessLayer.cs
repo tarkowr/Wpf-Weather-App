@@ -22,6 +22,8 @@ namespace Wpf_Weather_App.BusinessAccessLayer
         {
             IApiService apiService = new WeatherDataApiService();
 
+            _context.BasicWeatherData.Clear();
+
             foreach (int zip in zipCodes)
             {
                 WeatherData tempWeatherData = apiService.GetWeatherData(zip);
