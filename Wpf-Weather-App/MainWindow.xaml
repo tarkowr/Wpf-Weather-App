@@ -22,10 +22,10 @@
                   RowBackground="LightBlue" AlternatingRowBackground="White" 
                   IsReadOnly="true" CanUserResizeRows="false" CanUserAddRows="false" CanUserResizeColumns="False">
             <DataGrid.Columns>
-                <DataGridTextColumn Header="Zip Code" Width="*" Binding="{Binding Path=ZipCode}" />
-                <DataGridTextColumn Header="Location" Width="*" Binding="{Binding Path=Location}" />
-                <DataGridTextColumn Header="Temperature" Width="*" Binding="{Binding Path=Temperature}" />
-                <DataGridTextColumn Header="Wind Speed" Width="*" Binding="{Binding Path=WindSpeed}" />
+                <DataGridTextColumn Header="Zip Code" Width=".7*" Binding="{Binding Path=ZipCode}" />
+                <DataGridTextColumn Header="Location" Width="1*" Binding="{Binding Path=Location}" />
+                <DataGridTextColumn Header="Temperature (°F)" Width="1*" Binding="{Binding Path=Temperature}" />
+                <DataGridTextColumn Header="Wind Speed" Width=".7*" Binding="{Binding Path=WindSpeed}" />
             </DataGrid.Columns>
         </DataGrid>
         <StackPanel HorizontalAlignment="Center" Height="Auto" Margin="0,293,0,-272" VerticalAlignment="Top" Width="500">

@@ -5,8 +5,65 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Wpf_Weather_App"
         mc:Ignorable="d"
-        Title="DetailsWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="DetailsWindow" Height="400" Width="600" Loaded="Window_Loaded">
+    <Grid Background="#FFFCFCFC">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="80"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="4*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="4*"/>
+        </Grid.ColumnDefinitions>
+        <Label x:Name="lbl_Title" Content="" Grid.Row="0" Grid.ColumnSpan="3" Background="#FF193A70" Foreground="White" FontSize="20" HorizontalContentAlignment="Center" VerticalContentAlignment="Center"/>
+        <Image x:Name="image_Weather" Grid.Column="1" Grid.Row="2"/>
+        <GroupBox Header="LOCATION" Grid.Row="3" Height="Auto" Margin="20,5">
+            <Grid x:Name="Grid_Location" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lbl_Zip" Content="Zip Code:" HorizontalAlignment="Stretch" Height="30" Grid.Row="0" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_ZipValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="0" Grid.Column="1"/>
+
+                <Label x:Name="lbl_Lat" Content="Latitude:" HorizontalAlignment="Stretch" Height="30" Grid.Row="1" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_LatValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="1" Grid.Column="1"/>
+
+                <Label x:Name="lbl_Lon" Content="Longitude:" HorizontalAlignment="Stretch" Height="30" Grid.Row="2" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_LonValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+        </GroupBox>
+
+        <GroupBox Header="WEATHER" Grid.Row="3" Grid.Column="3" Height="Auto" Margin="20,5">
+            <Grid x:Name="Grid_Weather" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Label x:Name="lbl_Temp" Content="Temperature (°F):" HorizontalAlignment="Stretch" Height="30" Grid.Row="0" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_TempValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="0" Grid.Column="1"/>
+
+                <Label x:Name="lbl_Wind" Content="Wind Speed:" HorizontalAlignment="Stretch" Height="30" Grid.Row="1" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_WindValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="1" Grid.Column="1"/>
+
+                <Label x:Name="lbl_Desc" Content="Forecast:" HorizontalAlignment="Stretch" Height="30" Grid.Row="2" Grid.Column="0" Foreground="#FF193A70"/>
+                <Label x:Name="lbl_DescValue" Content="" HorizontalAlignment="Stretch"  Height="30" Grid.Row="2" Grid.Column="1"/>
+            </Grid>
+        </GroupBox>
+        <Button Grid.ColumnSpan="3" Content="Close" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="90" Height="40" Grid.Row="4" Background="#FF193A70" Foreground="White" BorderBrush="Black" FontSize="14" Click="Button_Click"/>
     </Grid>
 </Window>

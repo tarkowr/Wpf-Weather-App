@@ -81,7 +81,12 @@ namespace Wpf_Weather_App
 
         private void btn_Details_Click(object sender, RoutedEventArgs e)
         {
-
+            if(dataGrid_Weather.SelectedItems.Count == 1)
+            {
+                BasicWeatherData basicWeatherData = (BasicWeatherData)dataGrid_Weather.SelectedItem;
+                DetailsWindow detailsWindow = new DetailsWindow(basicWeatherData);
+                detailsWindow.ShowDialog();
+            }
         }
     }
 }
