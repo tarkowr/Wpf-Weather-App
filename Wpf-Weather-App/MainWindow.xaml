@@ -19,8 +19,8 @@
                   HorizontalScrollBarVisibility="Auto" 
                   HeadersVisibility="Column" AutoGenerateColumns="False" 
                   FontSize="15" ColumnHeaderHeight="40"
-                  Foreground="#FF193A70" Background="White" 
-                  RowBackground="LightBlue" AlternatingRowBackground="White" 
+                  Foreground="#FF282828" Background="White" 
+                  RowBackground="#FFECF4FF" AlternatingRowBackground="White" 
                   IsReadOnly="true" CanUserResizeRows="false" CanUserAddRows="false" CanUserResizeColumns="False">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="Zip Code" Width=".7*" Binding="{Binding Path=ZipCode}" />

@@ -42,6 +42,7 @@ namespace Wpf_Weather_App
         private void window_Main_Loaded(object sender, RoutedEventArgs e)
         {
             GetApiData();
+            PopulateComboBox();
         }
 
         private void btn_Refresh_Click(object sender, RoutedEventArgs e)
@@ -173,7 +174,6 @@ namespace Wpf_Weather_App
             finally
             {
                 BindDataToDataGrid(_context.BasicWeatherData);
-                PopulateComboBox();
             }
         }
 
